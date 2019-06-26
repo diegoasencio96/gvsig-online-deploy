@@ -1,8 +1,8 @@
 #!/bin/bash
 
-python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py compilemessages -l es --settings=tourism.settings
-python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py migrate --settings=tourism.settings                 # Apply database migrations
-python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py collectstatic --noinput --settings=tourism.settings  # Collect static files
+python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py compilemessages -l es --settings=gvsigol.settings
+python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py migrate --settings=gvsigol.settings                 # Apply database migrations
+python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py collectstatic --noinput --settings=gvsigol.settings  # Collect static files
 
 #Prepare log files and start outputting logs to stdout
 touch /srv/gvsig-online-deploy/gvsig-online/gvsigol/logs/gunicorn.log

@@ -5,9 +5,9 @@ python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py migrate --setting
 python /srv/gvsig-online-deploy/gvsig-online/gvsigol/manage.py collectstatic --noinput --settings=tourism.settings.testing  # Collect static files
 
 #Prepare log files and start outputting logs to stdout
-touch /srv/gvsig-online-deploy/gvsig-online/gvsigol/logs/gunicorn.log
-touch /srv/gvsig-online-deploy/gvsig-online/gvsigol/logs/access.log
-tail -n 0 -f /srv/gvsig-online-deploy/gvsig-online/gvsigol/logs/*.log &
+#touch /srv/gvsig-online-deploy/gvsig-online/gvsigol/logs/gunicorn.log
+#touch /srv/gvsig-online-deploy/gvsig-online/gvsigol/logs/access.log
+#tail -n 0 -f /srv/gvsig-online-deploy/gvsig-online/gvsigol/logs/*.log &
 
 # Start Gunicorn processes
 echo Starting Gunicorn.

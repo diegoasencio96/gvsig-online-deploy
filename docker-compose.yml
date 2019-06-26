@@ -6,7 +6,7 @@ services:
     container_name:
       gvsig-online
     volumes:
-      - ./webapps/gvsig-online:/srv/gvsig-online-deploy/gvsig-online
+      - ./webapps/gvsig-online/gvsig-online:/srv/gvsig-online-deploy/gvsig-online
     #env_file:
     #  - ./secrets/.gvsigol
     entrypoint: ["/docker-entrypoint.sh"]
@@ -20,7 +20,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./webapps/gvsig-online/gvsigol/assets:/srv/gvsig-online-deploy/gvsig-online/gvsigol/static
+      - ./webapps/gvsig-online/gvsig-online/gvsigol/assets:/srv/gvsig-online-deploy/gvsig-online/gvsigol/static
       - /var/www/media/srv/gvsig-online-deploy/gvsig-online/gvsigol/media
       - ./docker-images/nginx/sites-enabled/gvsigol.conf:/etc/nginx/conf.d/gvsigol.conf
     depends_on:

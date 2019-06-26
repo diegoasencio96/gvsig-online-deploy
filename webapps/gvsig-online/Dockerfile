@@ -19,7 +19,7 @@ RUN ln -s ./${DOCKYARD_SRC}/app_dev/gvsigol_app_dev
 RUN ln -s ./${DOCKYARD_SRC}/plugin_edition/gvsigol_plugin_edition
 
 # Update the default application repository sources list
-RUN apt-get update && apt-get install -y python python-pip libpq-dev python-dev python-pil build-essential gettext libxml2 libxml2-dev libxslt-dev binutils libproj-dev gdal-bin
+RUN apt-get update && apt-get install -y python python-pip libpq-dev python-dev python-pil build-essential gettext libxml2 libxml2-dev libxslt-dev binutils libproj-dev gdal-bin libsasl2-dev libldap2-dev libssl-dev
 
 # Create application subdirectories
 WORKDIR $DOCKYARD_SRVPROJ

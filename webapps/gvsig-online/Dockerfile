@@ -5,7 +5,7 @@ LABEL maintainer="diegoasencio96@gmail.com" \
       description="Django con Python 2.7.15" \
       version="1.0"
 
-RUN git clone https://github.com/diegoasencio96/gvsig-online.git
+#RUN git clone https://github.com/diegoasencio96/gvsig-online.git
 
 # Set env variables used in this Dockerfile (add a unique prefix, such as DOCKYARD)
 # Local directory with project source

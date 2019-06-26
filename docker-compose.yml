@@ -7,8 +7,8 @@ services:
       gvsig-online
     volumes:
       - ./webapps/gvsig-online:/srv/gvsig-online-deploy/gvsig-online
-    env_file:
-      - ./secrets/.gvsigol
+    #env_file:
+    #  - ./secrets/.gvsigol
     entrypoint: ["/docker-entrypoint.sh"]
     restart: 
       on-failure
@@ -37,8 +37,8 @@ services:
       ./docker-images/postgres/
     container_name:
       postgresql_bd
-    env_file: 
-      ./secrets/.postgresql
+    #env_file: 
+    #  ./secrets/.postgresql
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}

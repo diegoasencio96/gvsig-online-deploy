@@ -33,6 +33,7 @@ COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
 # Install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install -r $DOCKYARD_SRVPROJ/gvsigol/requirements.txt
+RUN pip install gunicorn
 
 COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
 # Port to expose
